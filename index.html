@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Integrity  - Image Manipulation Detection</title>
+    <!-- bootstrp -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--  -->
+    <link rel="icon" href="images\logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-5NSFVfiycyW+5pfr1+SNrPC4JZHiYN5+7b8S+Uk9/I4=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="bg-logo"></div>
+            <a href="/"><img src="images/logo_text1.png"></a>
+        </div>
+         <div class="navbar" id="navbar">
+            <a class="navbar-menu active" onclick="scrollToSection('home')">Home</a>
+            <a class="navbar-menu"  onclick="scrollToSection('about')">About Us</a>
+            <a class="navbar-menu"  onclick="scrollToSection('service')">Services</a>
+            <a class="navbar-menu"  onclick="scrollToSection('contact')">Contact Us</a>
+           
+        </div> 
+    </header>
+    
+    <section id="main-content">
+        <!-- <div class="block-shadow"><img src="images/pixel_cover.jpg" class="cover-img" alt=""></div> -->
+        <div class="container">
+            
+            <div id="home">
+                
+                
+                
+                <div id="home-des" >Welcome to <span style="font-weight: bold;">Pixel Integrity</span>, where image integrity is our priority. We are your gateway to uncompromised image authenticity. We specialize in advanced technologies designed to detect and thwart image manipulations, ensuring the utmost integrity of every pixel. Our cutting-edge tools empower you to analyze and secure visual content with confidence. Explore the forefront of image forensics, where we are dedicated to preserving the trustworthiness of digital visuals. Trust Pixel Integrity for robust solutions that safeguard the true essence of your images in an ever-evolving digital landscape.</div>
+                <div class="home-logo">
+                    <small>Your Image Manipulation Detection Tool!</small><br>
+                    <img src="images/logo_black.png" alt="" class="top-logo"><br>
+                </div>
+            </div>
+            <div id="try-now">
+                <div><button onclick="scrollToDemo()">Try it now!</button></div>
+                
+            </div>
+            <div id="about">
+                <div><img src="images/about-img.jpg" alt=""></div>
+                <div class="about-des"> 
+                    <h1>ABOUT US</h1>
+                    <p>As aspiring computer engineering students, Pixel Integrity is a reflection of our shared enthusiasm of the latest advances in technology. We set out on a mission to advance picture forensics using the lens of Convolutional Neural Networks (CNN) and cutting-edge preprocessing machine learning techniques. Devoted to comprehending the complexities of digital modification our joint objective is to identify and accurately pinpoint changes in photographs. Pixel Integrity is the result of the combined efforts of conscientious enthusiasts of computer science. Come explore with us as we bring our academic interests and the goal of protecting the integrity of the digital landscape together in this dynamic endeavor.</p>
+                </div>
+
+            </div>
+            <div id="service">
+                <div class="service-title">OUR SERVICES</div>
+                <div class="flex-container">
+                
+                <div class="flex-item">
+                    <i class="fa-solid fa-user-secret"></i>
+                    
+                    <p>Determining whether the content received is authentic or has undergone any alterations.</p>
+                </div>
+        
+                <div class="flex-item">
+                    
+                    <i class="fa-solid fa-file-image"></i>
+                    <p>Addressing concerns regarding the trustworthiness of received documents and images.</p>
+                </div>
+        
+                <div class="flex-item">
+                    <i class="fa-solid fa-file-shield"></i>
+                    
+                    <p>Ensuring accuracy and precision in detecting and revealing the authenticity behind visual content.</p>
+                </div>
+            </div>
+            <div id="demo">
+                <div class="demo-des">
+                    <h3>DEMONSTARTION</h3>
+                    <small>Please upload an image:</small><br>
+                    <button id="uploadButton" onclick="triggerFileInput()">Upload Image</button>
+                <input type="file" id="fileInput" accept="image/*" onchange="displayImage()" style="display: none;">
+                </div>
+                
+
+                <div id="imageContainer" style="display:none;">
+                    <img id="uploadedImage" alt="Uploaded Image" style="display:none;">
+                    <p id="imageText"></p>
+                </div>
+            </div>
+            <div id="feedback">
+                <div id="fb-des">
+                    <h3>FEEDBACK</h3>
+                    <form id="feedbackForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+            
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="message">Feedback:</label>
+                        <textarea id="message" name="message" rows="8" required></textarea>
+            
+                        <button type="submit">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+            <div id="contact-us">
+                <div id="contact">
+                    <h3>CONTACT US</h3>
+                    <a href="#" style="text-decoration: none; color: #f7f7f7;" ><p><i class="fa-solid fa-globe"></i>pixelintegrity.com.np</p></a>
+                    <a href="#" style="text-decoration: none; color: #f7f7f7;" ><p><i class="fa-solid fa-envelope"></i>pixellintegrity@gmail.com</p></a>
+                    <p><i class="fa-solid fa-square-phone"></i>+977-9898989898</p>
+                    <p>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </p>
+                </div>
+                <div id="map">
+                    <iframe width="400" height="300" src="https://www.openstreetmap.org/export/embed.html?bbox=85.29543757438661%2C27.697953907936565%2C85.29794812202454%2C27.69960441988125&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small ><a style="text-decoration: none; text-align: right; color:#D1D3EA;" href="https://www.openstreetmap.org/#map=19/27.69878/85.29669">View Larger Map</a></small>
+                </div>
+            </div>
+        </div>
+            
+            <!--
+        </div>
+        <p style="font-size: 2em;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            <i class="fas fa-angle-double-up"></i>
+
+            <br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a possimus alias, commodi impedit doloremque beatae. Illo alias, ab fuga nobis dignissimos et doloremque sint voluptates accusamus voluptas, quaerat quod.
+
+        </p> -->
+    </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2023 Pixel Integrity. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="scrollToTop" onclick="scrollToTop">
+        
+      </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/b9e6defa54.js" crossorigin="anonymous"></script>
+</body>
+</html>
